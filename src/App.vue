@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <header>
-      <span>Vue.js PWA</span>
+      <span>PWA VueJs</span>
     </header>
     <main>
       <div class="wrapper">
-        <div class="cards">
+        <div class="books">
            <book v-for="list in lists" :key="list.imageUrl" :list="list"></book>
         </div>
       </div>
@@ -75,7 +75,7 @@ header span {
   padding-top: 16px;
 }
 
-.cards {
+.books {
    column-count: 1;
   column-gap: 1em;
 }
@@ -83,22 +83,22 @@ header span {
   padding: 15px;
 }
 @media only screen and (min-width: 500px) {
-  .cards {
+  .books {
     column-count: 2;
   }
 }
 @media only screen and (min-width: 700px) {
-  .cards {
+  .books {
     column-count: 3;
   }
 }
 @media only screen and (min-width: 900px) {
-  .cards {
+  .books {
     column-count: 4;
   }
 }
 @media only screen and (min-width: 1100px) {
-  .cards {
+  .books {
     column-count: 5;
   }
 }

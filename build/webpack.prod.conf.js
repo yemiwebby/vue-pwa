@@ -100,12 +100,18 @@ var webpackConfig = merge(baseWebpackConfig, {
     new SWPrecacheWebpackPlugin({
       cacheId: 'my-vue-app',
       filename: 'service-worker.js',
-      staticFileGlobs: ['dist/**/*.{js,html,css,png,jpg,jpeg}'],
+      staticFileGlobs: ['dist/**/*.{js,html,css}'],
+      runtimeCaching: [
+        {
+          urlPattern: /^http:\/\/res\.cloudinary\.com\//,
+          handler: 'cacheFirst'
+        }
+      ],
       minify: true,
       stripPrefix: 'dist/'
     })
   ]
-})
+});
 
 if (config.build.productionGzip) {
   var CompressionWebpackPlugin = require('compression-webpack-plugin')

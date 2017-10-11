@@ -1,8 +1,7 @@
 <template>
-<div class="books">
+<div class="book">
   <div class="booksDetails">
-    <!-- <img :src="list.imageUrl" :alt="list.title"> -->
-    <img src="../assets/images/cover2.jpg" :alt="list.title">
+    <img :src="list.imageUrl" :alt="list.title">
     <h4>{{ list.title }}</h4>
     <p>{{ list.description }}</p>
   </div>
@@ -20,17 +19,17 @@
 </script>
 
 <style>
-.books {
+.book {
   background: #F5F5F5;
   display: inline-block;
   margin: 0 0 1em;
   width: 100%;
   cursor: pointer;
-  -webkit-perspective: 1000;
-  -webkit-backface-visibility: hidden;
+   -webkit-perspective: 1000;
+   -webkit-backface-visibility: hidden;
   transition: all 100ms ease-in-out;
   }
-  .books:hover {
+  .book:hover {
 	    transform: translateY(-0.5em);
     background: #EBEBEB;
   }
